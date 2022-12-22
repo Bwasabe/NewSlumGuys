@@ -89,6 +89,9 @@
     <ClCompile Include="BallPlayer.cpp">
       <Filter>Engine\04.Object\Player\BallPlayer</Filter>
     </ClCompile>
+    <ClCompile Include="Circle.cpp">
+      <Filter>Engine\04.Object\Monster\Circle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -196,6 +199,9 @@
     <ClInclude Include="BallPlayer.h">
       <Filter>Engine\04.Object\Player\BallPlayer</Filter>
     </ClInclude>
+    <ClInclude Include="Circle.h">
+      <Filter>Engine\04.Object\Monster\Circle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -292,6 +298,9 @@
     </Filter>
     <Filter Include="Engine\08.Module">
       <UniqueIdentifier>{c9d93065-e003-4164-b34b-c53c621078b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Monster\Circle">
+      <UniqueIdentifier>{9a093ef3-2152-4c1d-8f03-d65938243b39}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
