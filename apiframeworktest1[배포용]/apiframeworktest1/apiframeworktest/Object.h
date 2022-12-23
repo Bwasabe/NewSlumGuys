@@ -1,4 +1,5 @@
 #pragma once
+#include "Collider.h"
 class Collider;
 class Animator;
 class Object
@@ -19,7 +20,7 @@ public:
 	const Vec2& GetScale() { return m_vScale; }
 	Collider* GetCollider() { return m_pCollider; }
 	Animator* GetAnimator() { return m_pAnimator; }
-	void	CreateCollider();
+	void	CreateCollider(COLLIDER_TYPE type);
 	void	CreateAnimator();
 	void SetName(const wstring& _strName) { m_strName = _strName; }
 	const wstring& GetName() { return m_strName; }

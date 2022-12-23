@@ -9,7 +9,7 @@ Monster::Monster()
 	, m_iDir(1)
 	, m_iHp(5)
 {
-	CreateCollider();
+	//CreateCollider();
 	GetCollider()->SetScale(Vec2(40.f, 40.f));
 }
 

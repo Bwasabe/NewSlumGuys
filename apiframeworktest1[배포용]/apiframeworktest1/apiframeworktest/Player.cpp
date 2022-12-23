@@ -15,7 +15,7 @@
 Player::Player()
 {
 	// collider 새성
-	CreateCollider();
+	//CreateCollider();
 	GetCollider()->SetScale(Vec2(20.f, 30.f));
 
 	// image 업로드

@@ -11,7 +11,7 @@ Bullet::Bullet()
 {
 	m_pImage = ResMgr::GetInst()->ImgLoad(L"BulletImg", L"Image\\Bullet.bmp");
 	m_vDir.Normalize();
-	CreateCollider();
+	//CreateCollider();
 	GetCollider()->SetScale(Vec2(15.f, 15.f));
 }
 
