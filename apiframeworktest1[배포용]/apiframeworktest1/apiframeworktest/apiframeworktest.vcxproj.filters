@@ -125,6 +125,12 @@
     <ClCompile Include="BaseMoveCircle.cpp">
       <Filter>Engine\04.Object\BaseCircle\BaseMoveCircle</Filter>
     </ClCompile>
+    <ClCompile Include="FaceObj.cpp">
+      <Filter>Engine\04.Object\Face</Filter>
+    </ClCompile>
+    <ClCompile Include="MinusHP.cpp">
+      <Filter>Engine\04.Object\Minus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -268,6 +274,12 @@
     <ClInclude Include="BaseMoveCircle.h">
       <Filter>Engine\04.Object\BaseCircle\BaseMoveCircle</Filter>
     </ClInclude>
+    <ClInclude Include="FaceObj.h">
+      <Filter>Engine\04.Object\Face</Filter>
+    </ClInclude>
+    <ClInclude Include="MinusHP.h">
+      <Filter>Engine\04.Object\Minus</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -403,6 +415,12 @@
     </Filter>
     <Filter Include="Engine\04.Object\BaseCircle\BaseMoveCircle">
       <UniqueIdentifier>{2184e1db-f756-4f4e-b2b0-53827a68ee12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Face">
+      <UniqueIdentifier>{9cdf0d18-1950-40d4-9ad7-413a9b877bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Minus">
+      <UniqueIdentifier>{a4441f76-a309-4c60-927d-1ab1cd496228}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

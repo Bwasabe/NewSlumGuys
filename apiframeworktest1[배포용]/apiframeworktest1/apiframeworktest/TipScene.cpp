@@ -26,7 +26,7 @@ void TipScene::Enter()
 	tipObj->SetScale(Vec2(200.f, 500.f));
 	AddObject(tipObj, GROUP_TYPE::UI);
 
-	Object* faceObj = new FaceObj(Vec2((Core::GetInst()->GetResolution().x / 2) * 0.6f, (Core::GetInst()->GetResolution().y / 2) * 0.2f), FaceState::Smile);
+	Object* faceObj = new FaceObj(Vec2((Core::GetInst()->GetResolution().x / 2) * 0.6f, (Core::GetInst()->GetResolution().y / 2) * 1.f), FaceState::Smile);
 	faceObj->SetScale(Vec2(300.f, 300.f));
 	AddObject(faceObj, GROUP_TYPE::UI);
 
