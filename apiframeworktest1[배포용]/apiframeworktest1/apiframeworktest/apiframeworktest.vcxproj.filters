@@ -98,6 +98,24 @@
     <ClCompile Include="PlayerManager.cpp">
       <Filter>Engine\03.Manager\PlayerManager</Filter>
     </ClCompile>
+    <ClCompile Include="StartBtn.cpp">
+      <Filter>Engine\04.Object\Btn\Start</Filter>
+    </ClCompile>
+    <ClCompile Include="EscBtn.cpp">
+      <Filter>Engine\04.Object\Btn\ESC</Filter>
+    </ClCompile>
+    <ClCompile Include="QuitBtn.cpp">
+      <Filter>Engine\04.Object\Btn\Quit</Filter>
+    </ClCompile>
+    <ClCompile Include="Tip.cpp">
+      <Filter>Engine\04.Object\Btn\Tip</Filter>
+    </ClCompile>
+    <ClCompile Include="TipScene.cpp">
+      <Filter>Engine\05.Scene\TipScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Explain.cpp">
+      <Filter>Engine\04.Object\Btn\ExplainBtn</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -214,6 +232,24 @@
     <ClInclude Include="PlayerManager.h">
       <Filter>Engine\03.Manager\PlayerManager</Filter>
     </ClInclude>
+    <ClInclude Include="StartBtn.h">
+      <Filter>Engine\04.Object\Btn\Start</Filter>
+    </ClInclude>
+    <ClInclude Include="EscBtn.h">
+      <Filter>Engine\04.Object\Btn\ESC</Filter>
+    </ClInclude>
+    <ClInclude Include="QuitBtn.h">
+      <Filter>Engine\04.Object\Btn\Quit</Filter>
+    </ClInclude>
+    <ClInclude Include="Tip.h">
+      <Filter>Engine\04.Object\Btn\Tip</Filter>
+    </ClInclude>
+    <ClInclude Include="TipScene.h">
+      <Filter>Engine\05.Scene\TipScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Explain.h">
+      <Filter>Engine\04.Object\Btn\ExplainBtn</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -322,6 +358,27 @@
     </Filter>
     <Filter Include="Engine\03.Manager\PlayerManager">
       <UniqueIdentifier>{d9fe6dc4-c023-4ed4-bc3d-473c9311ebe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Btn">
+      <UniqueIdentifier>{2c7129ed-2bee-4b19-8aab-f08f3c8f0e76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Btn\Start">
+      <UniqueIdentifier>{5918ab5e-d9d3-405b-9281-a3b1e826c8e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Btn\ESC">
+      <UniqueIdentifier>{8770248e-8449-4904-8d5f-4794bdbbad88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Btn\Quit">
+      <UniqueIdentifier>{fc2d549e-6bb6-4ddd-8409-ac264be60ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Btn\Tip">
+      <UniqueIdentifier>{330e7063-2247-4ab3-9d2f-1b2bfd9bfdd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05.Scene\TipScene">
+      <UniqueIdentifier>{73236974-ef8f-4ca0-afc2-de51061871bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\Btn\ExplainBtn">
+      <UniqueIdentifier>{94f089cb-0788-42ee-a116-563825a2f008}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
