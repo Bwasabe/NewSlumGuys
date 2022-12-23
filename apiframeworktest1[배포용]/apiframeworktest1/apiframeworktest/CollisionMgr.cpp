@@ -116,20 +116,69 @@ void CollisionMgr::CollisionGroupUpdate(GROUP_TYPE _eLeft, GROUP_TYPE _eRight)
 
 bool CollisionMgr::IsCollision(Collider* _pLeft, Collider* _pRight)
 {
-	Vec2 vLeftPos = _pLeft->GetFinalPos();
-	Vec2 vRightPos = _pRight->GetFinalPos();
-	Vec2 vLeftScale = _pLeft->GetScale();
-	Vec2 vRightScale = _pRight->GetScale();
-
-	
-
-	if (abs(vRightPos.x - vLeftPos.x) < (vLeftScale.x + vRightScale.x) / 2.f
-		&& abs(vRightPos.y - vLeftPos.y) < (vLeftScale.y + vRightScale.y) / 2.f)
+	if(_pLeft->GetColliderType() == COLLIDER_TYPE::BOX 
+		&& _pRight->GetColliderType() == COLLIDER_TYPE::BOX)
 	{
-		return true;
-	}
+		Vec2 vLeftPos = _pLeft->GetFinalPos();
+		Vec2 vRightPos = _pRight->GetFinalPos();
+		Vec2 vLeftScale = _pLeft->GetScale();
+		Vec2 vRightScale = _pRight->GetScale();
 
-	return false;
+
+
+		if (abs(vRightPos.x - vLeftPos.x) < (vLeftScale.x + vRightScale.x) / 2.f
+			&& abs(vRightPos.y - vLeftPos.y) < (vLeftScale.y + vRightScale.y) / 2.f)
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+	else if (_pLeft->GetColliderType() == COLLIDER_TYPE::CIRCLE
+		&& _pRight->GetColliderType() == COLLIDER_TYPE::BOX)
+	{
+		Vec2 vCirclePos = _pLeft->GetFinalPos();
+		Vec2 vBoxPos = _pRight->GetFinalPos();
+		Vec2 vBoxScale = _pRight->GetScale();
+
+		Vec2 vBoxLeftTop =	Vec2(vBoxPos.x - vBoxScale.x, vBoxPos.y - vBoxScale.y);
+		Vec2 vBoxLeftBottom = Vec2(vBoxPos.x - vBoxScale.x, vBoxPos.y + vBoxScale.y);
+		Vec2 vBoxRightTop =	Vec2(vBoxPos.x + vBoxScale.x, vBoxPos.y - vBoxScale.y);
+		Vec2 vBoxRightBottom =Vec2(vBoxPos.x - vBoxScale.x, vBoxPos.y + vBoxScale.y);
+
+
+		float vLeftRadius = _pLeft->GetScale().x; //Circle일경우 Scale의 x와 y가 모두 radius이기 때문에 둘 중 아무거나 가져와도 상관 없음
+
+		if (abs((vBoxLeftTop - vCirclePos).Length()) <= vLeftRadius ||
+			abs((vBoxLeftBottom - vCirclePos).Length()) <= vLeftRadius ||
+			abs((vBoxRightTop - vCirclePos).Length()) <= vLeftRadius ||
+			abs((vBoxRightBottom - vCirclePos).Length()) <= vLeftRadius)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else if (_pLeft->GetColliderType() == COLLIDER_TYPE::CIRCLE
+		&& _pRight->GetColliderType() == COLLIDER_TYPE::CIRCLE)
+	{
+		Vec2 vLeftPos = _pLeft->GetFinalPos();
+		Vec2 vRightPos = _pRight->GetFinalPos();
+		float vLeftRadius = _pLeft->GetScale().x;
+		float vRightRadius = _pRight->GetScale().x;
+
+
+
+		if (abs((vLeftPos - vRightPos).Length()) <= vLeftRadius + vRightRadius)
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+	
 }
 
 void CollisionMgr::CheckGroup(GROUP_TYPE _eLeft, GROUP_TYPE _eRight)

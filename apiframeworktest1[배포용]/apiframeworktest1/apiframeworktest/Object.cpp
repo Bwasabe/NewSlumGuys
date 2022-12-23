@@ -46,9 +46,9 @@ Object::~Object()
 		delete m_pAnimator;
 }
 
-void Object::CreateCollider()
+void Object::CreateCollider(COLLIDER_TYPE type)
 {
-	m_pCollider = new Collider;
+	m_pCollider = new Collider(type);
 	m_pCollider->m_pOwner = this;
 }
 

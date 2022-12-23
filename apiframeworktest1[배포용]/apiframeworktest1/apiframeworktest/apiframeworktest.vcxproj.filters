@@ -92,6 +92,12 @@
     <ClCompile Include="Circle.cpp">
       <Filter>Engine\04.Object\Monster\Circle</Filter>
     </ClCompile>
+    <ClCompile Include="CircleMgr.cpp">
+      <Filter>Engine\03.Manager\CircleMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>Engine\03.Manager\PlayerManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -202,6 +208,12 @@
     <ClInclude Include="Circle.h">
       <Filter>Engine\04.Object\Monster\Circle</Filter>
     </ClInclude>
+    <ClInclude Include="CircleMgr.h">
+      <Filter>Engine\03.Manager\CircleMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.h">
+      <Filter>Engine\03.Manager\PlayerManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -301,6 +313,15 @@
     </Filter>
     <Filter Include="Engine\04.Object\Monster\Circle">
       <UniqueIdentifier>{9a093ef3-2152-4c1d-8f03-d65938243b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03.Manager\CircleMgr">
+      <UniqueIdentifier>{a684ee96-45dc-467d-9457-4292c95bc5ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03.Manager\PlayerMgr">
+      <UniqueIdentifier>{28c71b4c-9d4c-48ad-81d9-f7b123d8ab82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03.Manager\PlayerManager">
+      <UniqueIdentifier>{d9fe6dc4-c023-4ed4-bc3d-473c9311ebe2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

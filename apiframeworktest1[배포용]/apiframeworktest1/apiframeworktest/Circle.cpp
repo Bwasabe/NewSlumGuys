@@ -19,7 +19,7 @@ Circle::Circle()
     , m_bIsIn(true)
 {
     // collider 새성
-    CreateCollider();
+    CreateCollider(COLLIDER_TYPE::CIRCLE);
     GetCollider()->SetScale(Vec2(20.f, 30.f));
 
     // image 업로드
@@ -69,12 +69,21 @@ void Circle::Render(HDC _dc)
     int Width = (int)m_pImage->GetWidth();
     int Height = (int)m_pImage->GetHeight();
     Vec2 vPos = GetPos();
+    HBRUSH hredbrush = CreateSolidBrush(RGB(255, 255, 0));
+    HBRUSH oldBrush = (HBRUSH)SelectObject(_dc, hredbrush);
+        Ellipse(_dc,
+        (int)(vPos.x - (float)(m_fRadius / 2))
+        , (int)(vPos.y - (float)(m_fRadius / 2))
+        , (int)(vPos.x + (float)(m_fRadius / 2))
+        , (int)(vPos.y + (float)(m_fRadius / 2)) );
     BitBlt(_dc
         , (int)(vPos.x - (float)(Width / 2))
         , (int)(vPos.y - (float)(Height / 2))
         , Width, Height
         , m_pImage->GetDC()
         , 0, 0, SRCCOPY);
+   SelectObject(_dc, oldBrush);
+   DeleteObject(hredbrush);
 
     Component_Render(_dc);
 }
