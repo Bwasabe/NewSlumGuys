@@ -42,6 +42,7 @@ enum class GROUP_TYPE
 {
 	DEFAULT,
 	PLAYER,
+	UI,
 	BULLET_PLAYER,
 	BULLET_MONSTER,
 	MONSTER,
@@ -54,6 +55,7 @@ enum class SCENE_TYPE
 	SCENE_01,
 	TOOL,
 	SCENE_02,
+	TIP,
 	END,
 };
 
