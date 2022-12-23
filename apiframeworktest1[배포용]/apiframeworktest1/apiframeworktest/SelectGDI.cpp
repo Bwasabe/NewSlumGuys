@@ -19,6 +19,11 @@ SelectGDI::SelectGDI(HDC _dc, BRUSH_TYPE _eBrushType)
 	m_hDefaultBrush = (HBRUSH)SelectObject(_dc, hColorBrush);
 }
 
+SelectGDI::SelectGDI(HDC _dc, HFONT font)
+{
+
+}
+
 SelectGDI::~SelectGDI()
 {
 	SelectObject(m_hDC, m_hDefaultPen);

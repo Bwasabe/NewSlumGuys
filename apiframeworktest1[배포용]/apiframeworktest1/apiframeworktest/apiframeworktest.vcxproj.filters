@@ -116,6 +116,12 @@
     <ClCompile Include="Explain.cpp">
       <Filter>Engine\04.Object\Btn\ExplainBtn</Filter>
     </ClCompile>
+    <ClCompile Include="FaceObj.cpp">
+      <Filter>Engine\04.Object\FaceObj</Filter>
+    </ClCompile>
+    <ClCompile Include="MinusHP.cpp">
+      <Filter>Engine\04.Object\MinusHP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -250,6 +256,12 @@
     <ClInclude Include="Explain.h">
       <Filter>Engine\04.Object\Btn\ExplainBtn</Filter>
     </ClInclude>
+    <ClInclude Include="FaceObj.h">
+      <Filter>Engine\04.Object\FaceObj</Filter>
+    </ClInclude>
+    <ClInclude Include="MinusHP.h">
+      <Filter>Engine\04.Object\MinusHP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -379,6 +391,12 @@
     </Filter>
     <Filter Include="Engine\04.Object\Btn\ExplainBtn">
       <UniqueIdentifier>{94f089cb-0788-42ee-a116-563825a2f008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\FaceObj">
+      <UniqueIdentifier>{7d84f94c-8293-44d7-a8bd-09b51ee96749}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\MinusHP">
+      <UniqueIdentifier>{908948b5-2514-4e98-bf21-4388591b92c3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

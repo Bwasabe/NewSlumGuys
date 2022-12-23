@@ -78,21 +78,44 @@ void StartBtn::Render(HDC _dc)
 	//DeleteObject(font);
 	//EndPaint(hWnd, &ps);
 
-	HFONT font, oldfont;;
+	//HFONT font, oldfont;;
 
-	font = CreateFont(30, 0, 0, 0, 0, 0, 0, 0, HANGUL_CHARSET, 0, 0, 0, VARIABLE_PITCH | FF_ROMAN, TEXT("±Ã¼­"));
-	//font = CreateFont(50, 0, 0, 0, 0, 0, 0, 0, HANGEUL_CHARSET, 0, 0, 0, 0, L"±Ã¼­");
+	//font = CreateFont(30, 0, 0, 0, 0, 0, 0, 0, HANGUL_CHARSET, 0, 0, 0, VARIABLE_PITCH | FF_ROMAN, TEXT("Pretendard-Light"));
+	////font = CreateFont(50, 0, 0, 0, 0, 0, 0, 0, HANGEUL_CHARSET, 0, 0, 0, 0, L"±Ã¼­");
 
-	oldfont = (HFONT)SelectObject(_dc, font);
-	
+	//oldfont = (HFONT)SelectObject(_dc, font);
+	//
+	//TextOut(_dc, GetPos().x, GetPos().y - 20, L"´Ù¶÷Áã Çå ÃÂ¹ÙÄû¿¡ Å¸°íÆÄ", lstrlen(L"´Ù¶÷Áã Çå ÃÂ¹ÙÄû¿¡ Å¸°íÆÄ"));
 
-	SelectObject(_dc, oldfont);
+	//SelectObject(_dc, oldfont);
 
+	//DeleteObject(font);
+
+	SetBkMode(_dc, TRANSPARENT);
+
+	HFONT s_hFont = (HFONT)NULL;
+	HFONT s_oldHFont = (HFONT)NULL;
+	LOGFONT logFont;
+	ZeroMemory(&logFont, sizeof(LOGFONT));
+
+	logFont.lfHeight = -MulDiv(10, GetDeviceCaps(_dc, LOGPIXELSY), 50);
+	logFont.lfWeight = FW_NORMAL;
+	SetTextColor(_dc, RGB(0, 0, 0));
+
+	wcscpy_s(logFont.lfFaceName, TEXT("Pretendard-Light"));
+	s_hFont = CreateFontIndirect(&logFont);
+
+	s_oldHFont = (HFONT)SelectObject(_dc, s_hFont);
+
+	// ³»¿ë
+	TextOut(_dc, GetPos().x, GetPos().y - 20, L"´Ù¶÷Áã Çå ÃÂ¹ÙÄû¿¡ Å¸°íÆÄ", lstrlen(L"´Ù¶÷Áã Çå ÃÂ¹ÙÄû¿¡ Å¸°íÆÄ"));
+
+	SelectObject(_dc, s_oldHFont);
+	DeleteObject(s_hFont);
 	/*SelectGDI s(_dc, CreateFont(40, 0, 0, 0, 0, 0, 0, 0, HANGEUL_CHARSET, 0, 0, 0,
 		VARIABLE_PITCH | FF_ROMAN, TEXT("¿©±â¾î¶§ Àß³­Ã¼")));*/
 	//SelectGDI s1(_dc, RGB(255, 255, 255), CHANGE_TYPE::FONT_COLOR);*/
 
-	TextOut(_dc, GetPos().x, GetPos().y - 20, L"Play", lstrlen(L"Play"));
 
 
 	SetTextAlign(_dc, OPAQUE);

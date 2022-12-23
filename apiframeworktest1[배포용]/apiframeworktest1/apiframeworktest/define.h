@@ -46,6 +46,7 @@ enum class GROUP_TYPE
 	BULLET_PLAYER,
 	BULLET_MONSTER,
 	MONSTER,
+	ETC,
 	END = 32,
 };
 

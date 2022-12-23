@@ -173,11 +173,13 @@
     <ClInclude Include="EscBtn.h" />
     <ClInclude Include="EventMgr.h" />
     <ClInclude Include="Explain.h" />
+    <ClInclude Include="FaceObj.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="func.h" />
     <ClInclude Include="Gasi.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="KeyMgr.h" />
+    <ClInclude Include="MinusHP.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="PathMgr.h" />
@@ -216,6 +218,7 @@
     <ClCompile Include="EscBtn.cpp" />
     <ClCompile Include="EventMgr.cpp" />
     <ClCompile Include="Explain.cpp" />
+    <ClCompile Include="FaceObj.cpp" />
     <ClCompile Include="func.cpp" />
     <ClCompile Include="Gasi.cpp" />
     <ClCompile Include="Image.cpp" />
@@ -227,6 +230,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="MinusHP.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="PathMgr.cpp" />
