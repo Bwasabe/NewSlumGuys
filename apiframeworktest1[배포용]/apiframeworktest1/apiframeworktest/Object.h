@@ -1,7 +1,7 @@
 #pragma once
 #include "Collider.h"
-class Collider;
 class Animator;
+
 class Object
 {
 private:

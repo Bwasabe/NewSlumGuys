@@ -116,6 +116,15 @@
     <ClCompile Include="Explain.cpp">
       <Filter>Engine\04.Object\Btn\ExplainBtn</Filter>
     </ClCompile>
+    <ClCompile Include="BaseCircle.cpp">
+      <Filter>Engine\04.Object\BaseCircle</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleRenderMgr.cpp">
+      <Filter>Engine\03.Manager\CircleMgr\CircleRenderMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseMoveCircle.cpp">
+      <Filter>Engine\04.Object\BaseCircle\BaseMoveCircle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -250,6 +259,15 @@
     <ClInclude Include="Explain.h">
       <Filter>Engine\04.Object\Btn\ExplainBtn</Filter>
     </ClInclude>
+    <ClInclude Include="BaseCircle.h">
+      <Filter>Engine\04.Object\BaseCircle</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleRenderMgr.h">
+      <Filter>Engine\03.Manager\CircleMgr\CircleRenderMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseMoveCircle.h">
+      <Filter>Engine\04.Object\BaseCircle\BaseMoveCircle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -353,9 +371,6 @@
     <Filter Include="Engine\03.Manager\CircleMgr">
       <UniqueIdentifier>{a684ee96-45dc-467d-9457-4292c95bc5ee}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\03.Manager\PlayerMgr">
-      <UniqueIdentifier>{28c71b4c-9d4c-48ad-81d9-f7b123d8ab82}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\03.Manager\PlayerManager">
       <UniqueIdentifier>{d9fe6dc4-c023-4ed4-bc3d-473c9311ebe2}</UniqueIdentifier>
     </Filter>
@@ -379,6 +394,15 @@
     </Filter>
     <Filter Include="Engine\04.Object\Btn\ExplainBtn">
       <UniqueIdentifier>{94f089cb-0788-42ee-a116-563825a2f008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\BaseCircle">
+      <UniqueIdentifier>{7e50a552-e2ea-4315-8832-b03c737043e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03.Manager\CircleMgr\CircleRenderMgr">
+      <UniqueIdentifier>{2e75e50b-ac89-4c1a-8748-13045101c315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\BaseCircle\BaseMoveCircle">
+      <UniqueIdentifier>{2184e1db-f756-4f4e-b2b0-53827a68ee12}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

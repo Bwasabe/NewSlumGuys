@@ -157,6 +157,8 @@
     <ClInclude Include="Animator.h" />
     <ClInclude Include="apiframeworktest.h" />
     <ClInclude Include="BallPlayer.h" />
+    <ClInclude Include="BaseCircle.h" />
+    <ClInclude Include="BaseMoveCircle.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="BWindow.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
@@ -166,6 +168,7 @@
     </ClInclude>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="CircleMgr.h" />
+    <ClInclude Include="CircleRenderMgr.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="CollisionMgr.h" />
     <ClInclude Include="Core.h" />
@@ -207,9 +210,12 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Animator.cpp" />
     <ClCompile Include="BallPlayer.cpp" />
+    <ClCompile Include="BaseCircle.cpp" />
+    <ClCompile Include="BaseMoveCircle.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="CircleMgr.cpp" />
+    <ClCompile Include="CircleRenderMgr.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionMgr.cpp" />
     <ClCompile Include="Core.cpp" />

@@ -7,12 +7,6 @@ PlayerManager::PlayerManager()
 {
 }
 
-PlayerManager::PlayerManager(CircleMgr* mgr)
-{
-	m_pCircleMgr = mgr;
-}
-
-
 PlayerManager::~PlayerManager()
 {
 }
@@ -30,17 +24,20 @@ void PlayerManager::Init()
 	pObj2->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
 	pObj2->SetScale(Vec2(100.f, 100.f));
 
-	pObj->SetStartPos(m_pCircleMgr->GetCirclePos());
-	pObj2->SetStartPos(m_pCircleMgr->GetCirclePos());
+	pObj->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
+	pObj2->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 
-	pObj->SetInnerCircleRadius(m_pCircleMgr->GetInnerRadius());
-	pObj2->SetInnerCircleRadius(m_pCircleMgr->GetInnerRadius());
+	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius());
+	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius());
 
-	pObj->SetOuterCircleRadius(m_pCircleMgr->GetInnerRadius() + m_pCircleMgr->GetThickness());
-	pObj2->SetOuterCircleRadius(m_pCircleMgr->GetInnerRadius() + m_pCircleMgr->GetThickness());
+	pObj->SetMyRadius(30);
+	pObj2->SetMyRadius(30);
 
-	pObj->SetCurrentRadius(m_pCircleMgr->GetInnerRadius() + m_pCircleMgr->GetThickness() + pObj->GetMyRadius() * 0.5f);
-	pObj2->SetCurrentRadius(m_pCircleMgr->GetInnerRadius() + m_pCircleMgr->GetThickness() + pObj2->GetMyRadius() * 0.5f);
+	pObj->SetColor(RGB(0, 0, 0));
+	pObj2->SetColor(RGB(0,0,0));
+
+	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj->GetMyRadius() * 0.5f);
+	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj2->GetMyRadius() * 0.5f);
 
 	pObj->SetIsGoRight(true);
 	pObj2->SetIsGoRight(false);
@@ -56,8 +53,3 @@ void PlayerManager::Update()
 
 }
 
-void PlayerManager::Render(HDC _dc)
-{
-	m_pPlayer1->Render(_dc);
-	m_pPlayer2->Render(_dc);
-}

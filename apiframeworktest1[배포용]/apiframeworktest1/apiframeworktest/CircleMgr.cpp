@@ -44,4 +44,6 @@ void CircleMgr::Render(HDC _dc)
 	SelectObject(_dc, oldBrush);
 	DeleteObject(blackBrush);
 	DeleteObject(whiteBrush);
+
+
 }

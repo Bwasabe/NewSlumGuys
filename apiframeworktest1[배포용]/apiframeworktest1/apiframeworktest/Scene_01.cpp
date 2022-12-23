@@ -7,6 +7,7 @@
 #include "Circle.h"
 #include "CircleMgr.h"
 #include "PlayerManager.h"
+#include "CircleRenderMgr.h"
 Scene_01::Scene_01()
 {
 }
@@ -19,16 +20,21 @@ void Scene_01::Enter()
 {
 	// Object 추가
 
-	CircleMgr* circleMgr = new CircleMgr;
+	//CircleMgr* circleMgr = new CircleMgr;
 
 	/*circleMgr->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
 	circleMgr->SetScale(Vec2(100.f, 100.f));*/
 
-	AddObject(circleMgr, GROUP_TYPE::PLAYER);
+	AddObject(CircleMgr::GetInst(), GROUP_TYPE::PLAYER);
 
-	PlayerManager* playerMgr = new PlayerManager(circleMgr);
+	PlayerManager* playerMgr = new PlayerManager;
 
 	AddObject(playerMgr, GROUP_TYPE::PLAYER);
+
+	CircleRenderMgr* circleRenderMgr = new CircleRenderMgr;
+
+	AddObject(circleRenderMgr, GROUP_TYPE::PLAYER);
+
 
 	//// 충돌 지정 
 	//// Player - Monster 그룹 간의 충돌 체크
@@ -43,8 +49,10 @@ void Scene_01::Enter()
 	cObj->SetScale(Vec2(100.f, 100.f));
 	AddObject(cObj, GROUP_TYPE::PLAYER);*/
 
-
 	Scene::Enter();
+
+	circleRenderMgr->AddCircle(playerMgr->GetPlayer1());
+	circleRenderMgr->AddCircle(playerMgr->GetPlayer2());
 }
 
 void Scene_01::Exit()
