@@ -119,7 +119,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn0[i]);
@@ -139,7 +139,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn1[i]);
@@ -173,7 +173,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn2[i]);
@@ -195,7 +195,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn3[i]);
@@ -218,7 +218,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn4[i]);
@@ -238,7 +238,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+		///	circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn5[i]);
@@ -264,7 +264,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn6[i]);
@@ -293,7 +293,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn7[i]);
@@ -319,7 +319,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn8[i]);
@@ -330,16 +330,18 @@ void Scene_01::Enter()
 			//SceneMgr::GetInst()->GetCurScene()->AddObject(circle, GROUP_TYPE::PLAYER);
 			//circle->CreateCollider(COLLIDER_TYPE::CIRCLE);
 			CircleRenderMgr::GetInst()->AddCircle(circle);
+
 		}
 		break;
 	case 19:
 		for (int i = 0; i < 3; ++i)
 		{
+
 			BaseCircle* circle = new BaseCircle;
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn9[i]);
@@ -369,7 +371,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn10[i]);
@@ -393,7 +395,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn11[i]);
@@ -413,7 +415,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn12[i]);
@@ -436,7 +438,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn13[i]);
@@ -459,7 +461,7 @@ void Scene_01::Enter()
 			circle->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 			circle->SetScale(Vec2(15.f, 15.f));
 			//circle->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-			circle->SetMyRadius(15);
+			//circle->SetMyRadius(15);
 
 			//circle->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - circle->GetMyRadius() * 0.5f);
 			circle->SetInOrOutCircle(isIn14[i]);
