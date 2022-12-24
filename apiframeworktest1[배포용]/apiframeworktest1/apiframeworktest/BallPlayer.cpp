@@ -55,10 +55,3 @@ void BallPlayer::Render(HDC _dc)
 	Component_Render(_dc);
 }
 
-void BallPlayer::InitCollider()
-{
-	// collider »ý¼º
-	CreateCollider(COLLIDER_TYPE::CIRCLE);
-	GetCollider()->SetScale(Vec2(m_fMyRadius, m_fMyRadius));
-	GetCollider()->SetOffsetPos(Vec2(0, 0));
-}

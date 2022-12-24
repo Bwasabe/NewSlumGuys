@@ -19,12 +19,12 @@ void PlayerManager::Init()
 	int halfResolutionY = Core::GetInst()->GetResolution().y / 2;
 
 	pObj->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-	pObj->SetScale(Vec2(100.f, 100.f));
+	pObj->SetScale(Vec2(15.f, 15.f));
 
 	BallPlayer* pObj2 = new BallPlayer(KEY::W, KEY::S);
 
 	pObj2->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
-	pObj2->SetScale(Vec2(100.f, 100.f));
+	pObj2->SetScale(Vec2(15.f, 15.f));
 
 	pObj->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
 	pObj2->SetStartPos(CircleMgr::GetInst()->GetCirclePos());
@@ -32,23 +32,20 @@ void PlayerManager::Init()
 	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius());
 	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius());
 
-	pObj->SetMyRadius(15);
-	pObj2->SetMyRadius(15);
-
 	pObj->SetColor(RGB(0, 0, 0));
 	pObj2->SetColor(RGB(0,0,0));
 
 	pObj->SetAlpha(255);
 	pObj2->SetAlpha(255);
 
-	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj->GetMyRadius());
-	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj2->GetMyRadius());
+	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj->GetScale().x);
+	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj2->GetScale().x);
 
 	pObj->SetIsGoRight(true);
 	pObj2->SetIsGoRight(false);
 
-	pObj->InitCollider();
-	pObj2->InitCollider();
+	pObj->InitCollider(Vec2(0,0));
+	pObj2->InitCollider(Vec2(0, 0));
 
 	SetPlayer1(pObj);
 	SetPlayer2(pObj2);
