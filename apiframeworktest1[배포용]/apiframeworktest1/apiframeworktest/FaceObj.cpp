@@ -52,12 +52,12 @@ void FaceObj::Render(HDC _dc)
 	int Height = (int)m_faceImage->GetHeight();
 	Vec2 vPos = GetPos();
 
-	BitBlt(_dc
-		, (int)(vPos.x - (float)(Width / 2))
-		, (int)(vPos.y - (float)(Height / 2))
-		, Width, Height
-		, m_faceImage->GetDC()
-		, 0, 0, SRCCOPY);
+	//BitBlt(_dc
+	//	, (int)(vPos.x - (float)(Width / 2))
+	//	, (int)(vPos.y - (float)(Height / 2))
+	//	, Width, Height
+	//	, m_faceImage->GetDC()
+	//	, 0, 0, SRCCOPY);
 
 	TransparentBlt(_dc
 		, (int)(vPos.x - (float)(Width / 2))
