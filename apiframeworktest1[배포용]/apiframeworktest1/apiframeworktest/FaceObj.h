@@ -24,10 +24,15 @@ public:
 private:
 	Image* m_faceImage;
 	FaceState m_faceState;
+	bool m_isSmile;
+	bool m_isDead;
+
 
 public:
 	void SetFaceState(FaceState _state) { m_faceState = _state; }
 	FaceState GetFaceState() { return m_faceState; }
 
+	void SetIsSmile(bool issmile) { m_isSmile = issmile; }
+	bool GetIsSmile() { return  m_isSmile; }
 };
 

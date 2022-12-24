@@ -1,6 +1,5 @@
 #pragma once
 #include "Object.h"
-
 class FaceObj;
 
 class BaseEnemy :
@@ -24,9 +23,12 @@ public:
 
 public:
     void        SetPattern(int pattern) { m_iPattern = pattern; }
+    void        SetHP(int hp) { m_hp = hp; }
+    int       GettHP() { return m_hp; }
     
 private:
     int         m_iPattern;
+    int         m_hp;
     
 private:
     FaceObj*    m_FaceObject;

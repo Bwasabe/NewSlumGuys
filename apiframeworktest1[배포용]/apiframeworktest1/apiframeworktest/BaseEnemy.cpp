@@ -43,6 +43,7 @@ void BaseEnemy::EnterCollision(Collider* _pOther)
 	if (pOtherObj->GetName() == L"Player1")
 	{
 		m_iPattern++;
+		m_hp--;
 	}
 }
 

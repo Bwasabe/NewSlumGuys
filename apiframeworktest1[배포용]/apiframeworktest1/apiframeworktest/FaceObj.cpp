@@ -9,7 +9,7 @@
 #include "TimeMgr.h"
 #include "SoundMgr.h"
 #include "Image.h"
-FaceObj::FaceObj(Vec2 pos, FaceState state) : m_faceState(state)
+FaceObj::FaceObj(Vec2 pos, FaceState state) : m_faceState(state) , m_isDead(false) , m_isSmile(true)
 {
 	SetPos(pos);
 
@@ -72,10 +72,33 @@ void FaceObj::Render(HDC _dc)
 
 void FaceObj::Update()
 {
+	ChcekFace();
+
 	if (KEY_TAP(KEY::B))
+	{
+		//m_faceState = FaceState::Smile;
+		SetIsSmile(true);
+	}
+	else if (KEY_TAP(KEY::A))
+	{
+		//m_faceState = FaceState::Angry;
+
+		SetIsSmile(false);
+	}
+
+
+	if (m_isSmile == true)
+	{
+		m_faceState = FaceState::Smile;
+	}
+	if (m_isSmile == false)
 	{
 		m_faceState = FaceState::Angry;
 	}
-	ChcekFace();
+	if (m_isDead == true)
+	{
+		m_faceState = FaceState::Die;
+	}
+	
 }
 
