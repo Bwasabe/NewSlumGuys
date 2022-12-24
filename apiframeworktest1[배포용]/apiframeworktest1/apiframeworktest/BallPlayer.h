@@ -16,7 +16,10 @@ private:
 
 public:
     //void Init()          override;
-    void Update()        override;
+    void    Update()        override;
+    void    Render(HDC _dc) override;
+
+    void    InitCollider();
 
     KEY     m_kUpKey;
     KEY     m_kDownKey;

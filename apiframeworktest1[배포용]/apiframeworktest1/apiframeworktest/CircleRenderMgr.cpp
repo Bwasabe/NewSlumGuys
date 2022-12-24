@@ -37,22 +37,22 @@ void CircleRenderMgr::Render(HDC _dc)
 			Vec2 vPos = it->GetPos();
 
 			Ellipse(hMemDC
-				, (int)(vPos.x - (float)(it->GetMyRadius() / 2))
-				, (int)(vPos.y - (float)(it->GetMyRadius() / 2))
-				, (int)(vPos.x + (float)(it->GetMyRadius() / 2))
-				, (int)(vPos.y + (float)(it->GetMyRadius() / 2))
+				, (int)(vPos.x - (float)(it->GetMyRadius()))
+				, (int)(vPos.y - (float)(it->GetMyRadius()))
+				, (int)(vPos.x + (float)(it->GetMyRadius()))
+				, (int)(vPos.y + (float)(it->GetMyRadius()))
 			);
 
 			AlphaBlend(_dc
-				, (int)(vPos.x - (float)(it->GetMyRadius() / 2))
-				, (int)(vPos.y - (float)(it->GetMyRadius() / 2))
-				, it->GetMyRadius()
-				, it->GetMyRadius()
+				, (int)(vPos.x - (float)(it->GetMyRadius()))
+				, (int)(vPos.y - (float)(it->GetMyRadius()))
+				, it->GetMyRadius() * 2.f
+				, it->GetMyRadius() * 2.f
 				, hMemDC
-				, (int)(vPos.x - (float)(it->GetMyRadius() / 2))
-				, (int)(vPos.y - (float)(it->GetMyRadius() / 2))
-				, it->GetMyRadius()
-				, it->GetMyRadius()
+				, (int)(vPos.x - (float)(it->GetMyRadius()))
+				, (int)(vPos.y - (float)(it->GetMyRadius()))
+				, it->GetMyRadius() * 2.f
+				, it->GetMyRadius() * 2.f
 				, bf);
 
 			SelectObject(hMemDC, oldBrush);

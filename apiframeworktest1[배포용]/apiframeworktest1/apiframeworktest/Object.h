@@ -31,7 +31,7 @@ private:
 public:
 	virtual void	Init() {}
 	virtual void	Update() abstract;
-	virtual void	FinalUpdate() final;
+	virtual void	FinalUpdate();
 	virtual void	Render(HDC _dc);
 	virtual void	StayCollision(Collider* _pOther) {}
 	virtual void	EnterCollision(Collider* _pOther) {}

@@ -13,7 +13,7 @@ BaseCircle::BaseCircle()
 BaseCircle::~BaseCircle()
 {
 }
-
+ 
 void BaseCircle::SetPosToCirclePos(float moveValue)
 {
 	Vec2 vPos = GetPos();

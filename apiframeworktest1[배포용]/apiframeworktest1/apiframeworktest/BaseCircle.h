@@ -20,6 +20,7 @@ public:
     float       GetMyRadius() { return m_fMyRadius; }
 
     int         GetAlpha() { return m_iAlpha; }
+    void        SetAlpha(int alpha) { m_iAlpha = alpha; }
 
     void        SetCurrentRadius(float radius) { m_fCurrentCircleRadius = radius; }
 

@@ -2,6 +2,8 @@
 #include "PlayerManager.h"
 #include "Core.h"
 #include "CircleMgr.h"
+#include "SceneMgr.h"
+#include "Scene.h"
 
 PlayerManager::PlayerManager()
 {
@@ -30,26 +32,46 @@ void PlayerManager::Init()
 	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius());
 	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius());
 
-	pObj->SetMyRadius(30);
-	pObj2->SetMyRadius(30);
+	pObj->SetMyRadius(15);
+	pObj2->SetMyRadius(15);
 
 	pObj->SetColor(RGB(0, 0, 0));
 	pObj2->SetColor(RGB(0,0,0));
 
-	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj->GetMyRadius() * 0.5f);
-	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj2->GetMyRadius() * 0.5f);
+	pObj->SetAlpha(255);
+	pObj2->SetAlpha(255);
+
+	pObj->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj->GetMyRadius());
+	pObj2->SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + pObj2->GetMyRadius());
 
 	pObj->SetIsGoRight(true);
 	pObj2->SetIsGoRight(false);
 
+	pObj->InitCollider();
+	pObj2->InitCollider();
+
 	SetPlayer1(pObj);
 	SetPlayer2(pObj2);
-}
 
-void PlayerManager::Update()
-{
-	m_pPlayer1->Update();
-	m_pPlayer2->Update();
-
+	SceneMgr::GetInst()->GetCurScene()->AddObject(pObj, GROUP_TYPE::PLAYER);
+	SceneMgr::GetInst()->GetCurScene()->AddObject(pObj2, GROUP_TYPE::PLAYER);
 }
+//
+//void PlayerManager::Update()
+//{
+//	m_pPlayer1->Update();
+//	m_pPlayer2->Update();
+//}
+//
+//void PlayerManager::Render(HDC _dc)
+//{
+//	m_pPlayer1->Render(_dc);
+//	m_pPlayer2->Render(_dc);
+//}
+//
+//void PlayerManager::FinalUpdate()
+//{
+//	m_pPlayer1->FinalUpdate();
+//	m_pPlayer2->FinalUpdate();
+//}
 

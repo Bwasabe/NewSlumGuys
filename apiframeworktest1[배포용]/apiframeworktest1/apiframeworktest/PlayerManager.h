@@ -12,8 +12,9 @@ public:
 
 public:
 	void Init() override; // 플레이어 생성
-	void Update() override; // 플레이어들의 업데이트
-
+	void Update() override {} // 플레이어들의 업데이트
+	//void Render(HDC _dc) override; // 플레이어 콜리더 같은거 랜더
+	//void FinalUpdate() override;
 public:
 	void SetPlayer1(BallPlayer* player) { m_pPlayer1 = player; }
 	BallPlayer* GetPlayer1() { return m_pPlayer1; }

@@ -158,6 +158,7 @@
     <ClInclude Include="apiframeworktest.h" />
     <ClInclude Include="BallPlayer.h" />
     <ClInclude Include="BaseCircle.h" />
+    <ClInclude Include="BaseEnemy.h" />
     <ClInclude Include="BaseMoveCircle.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="BWindow.h">
@@ -213,6 +214,7 @@
     <ClCompile Include="Animator.cpp" />
     <ClCompile Include="BallPlayer.cpp" />
     <ClCompile Include="BaseCircle.cpp" />
+    <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMoveCircle.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Circle.cpp" />

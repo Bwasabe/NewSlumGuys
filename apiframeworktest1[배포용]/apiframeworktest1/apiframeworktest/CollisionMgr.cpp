@@ -36,8 +36,10 @@ void CollisionMgr::CollisionGroupUpdate(GROUP_TYPE _eLeft, GROUP_TYPE _eRight)
 	const vector<Object*>& vecLeft = pCurScene->GetGroupObject(_eLeft);
 	const vector<Object*>& vecRight = pCurScene->GetGroupObject(_eRight);
 	map<ULONGLONG, bool>::iterator iter;
+
 	for (size_t i = 0; i < vecLeft.size(); i++)
 	{
+		// TODO: 플레이어들 Scene에 Add해주기
 		// 충돌체를 보유하지 않는 경우
 		if (nullptr == vecLeft[i]->GetCollider())
 			continue;
@@ -116,6 +118,7 @@ void CollisionMgr::CollisionGroupUpdate(GROUP_TYPE _eLeft, GROUP_TYPE _eRight)
 
 bool CollisionMgr::IsCollision(Collider* _pLeft, Collider* _pRight)
 {
+
 	if(_pLeft->GetColliderType() == COLLIDER_TYPE::BOX 
 		&& _pRight->GetColliderType() == COLLIDER_TYPE::BOX)
 	{

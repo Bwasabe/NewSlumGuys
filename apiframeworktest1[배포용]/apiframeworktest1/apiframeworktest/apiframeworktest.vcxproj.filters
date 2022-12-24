@@ -131,6 +131,9 @@
     <ClCompile Include="MinusHP.cpp">
       <Filter>Engine\04.Object\Minus</Filter>
     </ClCompile>
+    <ClCompile Include="BaseEnemy.cpp">
+      <Filter>Engine\04.Object\BaseEnemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -280,6 +283,9 @@
     <ClInclude Include="MinusHP.h">
       <Filter>Engine\04.Object\Minus</Filter>
     </ClInclude>
+    <ClInclude Include="BaseEnemy.h">
+      <Filter>Engine\04.Object\BaseEnemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -421,6 +427,9 @@
     </Filter>
     <Filter Include="Engine\04.Object\Minus">
       <UniqueIdentifier>{a4441f76-a309-4c60-927d-1ab1cd496228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\BaseEnemy">
+      <UniqueIdentifier>{d4b4cd94-1083-497f-b17b-aea5b6cda8b7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
