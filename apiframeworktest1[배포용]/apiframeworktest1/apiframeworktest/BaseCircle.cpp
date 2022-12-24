@@ -7,6 +7,7 @@ BaseCircle::BaseCircle()
 	, m_bIsIn(false)
 	, m_fCurrentCircleRadius(0)
 	, m_iAlpha(255)
+	, m_iImage(nullptr)
 {
 }
 
@@ -18,6 +19,7 @@ BaseCircle::~BaseCircle()
 //{
 //	Object::FinalUpdate();
 //}
+
 
 void BaseCircle::InitCollider(Vec2 offset)
 {
@@ -51,3 +53,4 @@ void BaseCircle::SetInOrOutCircle(bool isIn)
 	}
 	int a = 0;
 }
+

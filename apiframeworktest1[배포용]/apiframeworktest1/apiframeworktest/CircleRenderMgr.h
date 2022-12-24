@@ -14,6 +14,10 @@ public:
 
 public:
 	void AddCircle(BaseCircle* circle) { m_vCircles.push_back(circle); }
+	void RemoveCircle(BaseCircle* circle) {
+		m_vCircles.erase(remove(m_vCircles.begin(), m_vCircles.end(), circle), m_vCircles.end());
+		int a = 0;
+	}
 
 private:
 	vector<BaseCircle*> m_vCircles;

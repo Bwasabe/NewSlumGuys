@@ -1,12 +1,12 @@
 #pragma once
 #include "Object.h"
 class FaceObj;
-
+class Image;
 class BaseEnemy :
     public Object
 {
 public:
-    BaseEnemy();
+    BaseEnemy(class PlayerManager* mgr);
     virtual ~BaseEnemy();
 
 private:
@@ -23,16 +23,22 @@ public:
 
 public:
     void        SetPattern(int pattern) { m_iPattern = pattern; }
+    int         GetPattern() { return m_iPattern; }
     void        SetHP(int hp) { m_hp = hp; }
     int       GettHP() { return m_hp; }
     
 private:
+    Image* m_gasiImage;
     int         m_iPattern;
     int         m_hp;
+    bool        m_bIsCanChangePattern = true;
+    bool        m_bIsRemove;
     
 private:
     FaceObj*    m_FaceObject;
 
-    vector<Object*> m_vPatternObjs;
+    PlayerManager* m_pPlayerMgr;
+
+    vector<class BaseCircle*> m_vPatternObjs;
 };
 

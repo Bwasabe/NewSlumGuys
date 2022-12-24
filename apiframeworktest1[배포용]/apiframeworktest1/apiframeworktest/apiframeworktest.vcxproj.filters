@@ -137,6 +137,9 @@
     <ClCompile Include="TeleportObject.cpp">
       <Filter>Engine\04.Object\TeleportObject</Filter>
     </ClCompile>
+    <ClCompile Include="CircleGasi.cpp">
+      <Filter>Engine\04.Object\CircleGasi</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -292,6 +295,9 @@
     <ClInclude Include="TeleportObject.h">
       <Filter>Engine\04.Object\TeleportObject</Filter>
     </ClInclude>
+    <ClInclude Include="CircleGasi.h">
+      <Filter>Engine\04.Object\CircleGasi</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -439,6 +445,9 @@
     </Filter>
     <Filter Include="Engine\04.Object\TeleportObject">
       <UniqueIdentifier>{99c265eb-8fb4-4291-89e8-1eb2974f747c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\CircleGasi">
+      <UniqueIdentifier>{91cb6720-2cca-4074-ae1f-b1b2ff3c5e44}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

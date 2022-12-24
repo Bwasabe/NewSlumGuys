@@ -25,8 +25,8 @@ public:
 	void SetName(const wstring& _strName) { m_strName = _strName; }
 	const wstring& GetName() { return m_strName; }
 	bool IsDead() { return !m_bAlive; }
-private:
 	void SetDead() { m_bAlive = false; }
+private:
 	friend class EventMgr;
 public:
 	virtual void	Init() {}

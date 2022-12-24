@@ -168,6 +168,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Circle.h" />
+    <ClInclude Include="CircleGasi.h" />
     <ClInclude Include="CircleMgr.h" />
     <ClInclude Include="CircleRenderMgr.h" />
     <ClInclude Include="Collider.h" />
@@ -219,6 +220,7 @@
     <ClCompile Include="BaseMoveCircle.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="CircleGasi.cpp" />
     <ClCompile Include="CircleMgr.cpp" />
     <ClCompile Include="CircleRenderMgr.cpp" />
     <ClCompile Include="Collider.cpp" />

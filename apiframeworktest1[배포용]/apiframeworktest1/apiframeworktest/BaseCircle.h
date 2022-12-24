@@ -1,5 +1,6 @@
 #pragma once
 #include "Object.h"
+class Image;
 
 class BaseCircle : public Object
 {
@@ -12,6 +13,7 @@ private:
 
 public:
     virtual void Update() override{}
+
 public:
     void        InitCollider(Vec2 offset = Vec2(0,0));
 
@@ -35,7 +37,8 @@ public:
 
     void        SetInOrOutCircle(bool isIn);
 
-
+    void        SetImage(Image* image) { m_iImage = image; }
+    Image*      GetImage() { return m_iImage; }
 
 protected:
     //float   m_fMyRadius;
@@ -52,5 +55,9 @@ private:
 
 protected:
     Vec2    m_vStartPos;
+
+private:
+    Image* m_iImage;
+
 };
 
