@@ -37,9 +37,7 @@ void CircleRenderMgr::Render(HDC _dc)
 
 			Vec2 vPos = it->GetPos();
 
-			if (it->GetImage() == nullptr)
-			{
-					Ellipse(hMemDC
+			Ellipse(hMemDC
 				, (int)(vPos.x - (float)(it->GetScale().x))
 				, (int)(vPos.y - (float)(it->GetScale().x))
 				, (int)(vPos.x + (float)(it->GetScale().x))
@@ -47,44 +45,48 @@ void CircleRenderMgr::Render(HDC _dc)
 			);
 
 
-					AlphaBlend(_dc
-						, (int)(vPos.x - (float)(it->GetScale().x))
-						, (int)(vPos.y - (float)(it->GetScale().x))
-						, it->GetScale().x * 2.f
-						, it->GetScale().x * 2.f
-						, hMemDC
-						, (int)(vPos.x - (float)(it->GetScale().x))
-						, (int)(vPos.y - (float)(it->GetScale().x))
-						, it->GetScale().x * 2.f
-						, it->GetScale().x * 2.f
-						, bf);
-			}
-			else
-			{
-				int Width = (int)it->GetImage()->GetWidth();
-				int Height = (int)it->GetImage()->GetHeight();
-				Vec2 vPos = it->GetPos();
+			AlphaBlend(_dc
+				, (int)(vPos.x - (float)(it->GetScale().x))
+				, (int)(vPos.y - (float)(it->GetScale().x))
+				, it->GetScale().x * 2.f
+				, it->GetScale().x * 2.f
+				, hMemDC
+				, (int)(vPos.x - (float)(it->GetScale().x))
+				, (int)(vPos.y - (float)(it->GetScale().x))
+				, it->GetScale().x * 2.f
+				, it->GetScale().x * 2.f
+				, bf);
 
-				TransparentBlt(_dc
-					, (int)(vPos.x - (float)(Width / 2))
-					, (int)(vPos.y - (float)(Height / 2))
-					, Width * 0.45f, Height * 0.45f
-					, it->GetImage()->GetDC()
-					, 0, 0, Width, Height
-					, RGB(255, 0, 255));
+			//if (it->GetImage() == nullptr)
+			//{
+			//		
+			//}
+			//else
+			//{
+			//	int Width = (int)it->GetImage()->GetWidth();
+			//	int Height = (int)it->GetImage()->GetHeight();
+			//	Vec2 vPos = it->GetPos();
+
+			//	TransparentBlt(_dc
+			//		, (int)(vPos.x - (float)(Width / 2))
+			//		, (int)(vPos.y - (float)(Height / 2))
+			//		, Width * 0.45f, Height * 0.45f
+			//		, it->GetImage()->GetDC()
+			//		, 0, 0, Width, Height
+			//		, RGB(255, 0, 255));
 
 
-				AlphaBlend(_dc
-					, 0,0
-					, Width
-					, Height
-					, hMemDC
-					, 0
-					, 0
-					, Width
-					, Height
-					, bf);
-			}
+			//	AlphaBlend(_dc
+			//		, 0,0
+			//		, Width
+			//		, Height
+			//		, hMemDC
+			//		, 0
+			//		, 0
+			//		, Width
+			//		, Height
+			//		, bf);
+			//}
 		
 
 

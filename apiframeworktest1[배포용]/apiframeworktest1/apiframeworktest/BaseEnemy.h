@@ -25,11 +25,11 @@ public:
     void        SetPattern(int pattern) { m_iPattern = pattern; }
     int         GetPattern() { return m_iPattern; }
     void        SetHP(int hp) { m_hp = hp; }
-    int       GettHP() { return m_hp; }
+    int         GettHP() { return m_hp; }
     
 private:
-    Image* m_gasiImage;
-    int         m_iPattern;
+    Image*      m_gasiImage;
+    int         m_iPattern = 0;
     int         m_hp;
     bool        m_bIsCanChangePattern = true;
     bool        m_bIsRemove;

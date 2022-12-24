@@ -7,7 +7,7 @@ BaseCircle::BaseCircle()
 	, m_bIsIn(false)
 	, m_fCurrentCircleRadius(0)
 	, m_iAlpha(255)
-	, m_iImage(nullptr)
+	//, m_iImage(nullptr)
 {
 }
 

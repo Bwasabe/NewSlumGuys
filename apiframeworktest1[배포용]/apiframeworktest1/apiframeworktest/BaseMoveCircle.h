@@ -19,6 +19,9 @@ public:
     float    GetTimer() { return m_fTimer; }
    // void    SetInOrOutCircle(bool isIn);
 
+    void    SetSpeed(float speed) { m_fSpeed = speed; }
+    float   GetSpeed() { return m_fSpeed; }
+
     void    MoveObject();
 
 private:

@@ -37,8 +37,8 @@ public:
 
     void        SetInOrOutCircle(bool isIn);
 
-    void        SetImage(Image* image) { m_iImage = image; }
-    Image*      GetImage() { return m_iImage; }
+    void        SetIndex(int index) { m_iIndex = index; }
+    int         GetIndex() { return m_iIndex; }
 
 protected:
     //float   m_fMyRadius;
@@ -46,6 +46,8 @@ private:
     float   m_fCurrentCircleRadius;
 
     int     m_iAlpha;
+
+    int     m_iIndex;
 
 protected:
     bool    m_bIsIn;
@@ -56,8 +58,6 @@ private:
 protected:
     Vec2    m_vStartPos;
 
-private:
-    Image* m_iImage;
 
 };
 

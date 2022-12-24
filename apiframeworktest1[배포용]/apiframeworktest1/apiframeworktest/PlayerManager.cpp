@@ -45,6 +45,8 @@ void PlayerManager::Init()
 	//pObj2->SetIsGoRight(false);
 
 	pObj->InitCollider(Vec2(0,0));
+
+	pObj->SetSpeed(2);
 	//pObj2->InitCollider(Vec2(0, 0));
 
 	SetPlayer1(pObj);

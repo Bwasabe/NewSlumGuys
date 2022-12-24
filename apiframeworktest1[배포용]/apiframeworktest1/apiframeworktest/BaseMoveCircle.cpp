@@ -5,7 +5,7 @@
 
 BaseMoveCircle::BaseMoveCircle() : BaseCircle()
 	, m_bIsGoRight(true)
-	, m_fSpeed(3)
+	, m_fSpeed(1)
 	, m_fTimer(0)
 {
 }
