@@ -66,3 +66,4 @@ void CircleRenderMgr::Render(HDC _dc)
 	DeleteDC(hMemDC);
 
 }
+

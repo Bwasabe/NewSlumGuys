@@ -15,6 +15,8 @@ public:
     void    SetIsGoRight(bool isRight) { m_bIsGoRight = isRight; }
     bool    GetIsGoRight() { return m_bIsGoRight; }
 
+    void    SetTimer(float timer) { m_fTimer = timer; }
+    float    GetTimer() { return m_fTimer; }
    // void    SetInOrOutCircle(bool isIn);
 
     void    MoveObject();

@@ -14,6 +14,11 @@ BaseCircle::~BaseCircle()
 {
 }
 
+//void BaseCircle::FinalUpdate()
+//{
+//	Object::FinalUpdate();
+//}
+
 void BaseCircle::InitCollider(Vec2 offset)
 {
 	// collider »ý¼º
@@ -38,11 +43,11 @@ void BaseCircle::SetInOrOutCircle(bool isIn)
 	m_bIsIn = isIn;
 	if (isIn)
 	{
-		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - GetScale().x * 0.5f);
+		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - GetScale().x);
 	}
 	else
 	{
-		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + GetScale().x * 0.5f);
+		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + GetScale().x);
 	}
 	int a = 0;
 }

@@ -41,12 +41,12 @@ void TipScene::Enter()
 	minusObj->SetPos(Vec2((Core::GetInst()->GetResolution().x / 2) * 1.2f, (Core::GetInst()->GetResolution().y / 2) * 0.3f));
 	AddObject(minusObj, GROUP_TYPE::ETC);*/
 
-	CircleMgr* circleMgr = new CircleMgr;
+	//CircleMgr* circleMgr = new CircleMgr;
 
 	/*circleMgr->SetPos(Vec2(Core::GetInst()->GetResolution().x / 2, Core::GetInst()->GetResolution().y / 2));
 	circleMgr->SetScale(Vec2(100.f, 100.f));*/
 
-	AddObject(circleMgr, GROUP_TYPE::PLAYER);
+	//AddObject(circleMgr, GROUP_TYPE::PLAYER);
 
 	PlayerManager* playerMgr = new PlayerManager;
 

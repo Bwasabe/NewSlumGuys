@@ -12,14 +12,13 @@ private:
 
 public:
     virtual void Update() override{}
-
 public:
-    void        InitCollider(Vec2 offset);
+    void        InitCollider(Vec2 offset = Vec2(0,0));
 
 
 public:
     void        SetStartPos(Vec2 value) { m_vStartPos = value; }
-
+    Vec2        GetStartPos() { return m_vStartPos; }
     //void        SetMyRadius(float radius) { m_fMyRadius = radius; }
     //float       GetMyRadius() { return m_fMyRadius; }
 
@@ -27,6 +26,7 @@ public:
     void        SetAlpha(int alpha) { m_iAlpha = alpha; }
 
     void        SetCurrentRadius(float radius) { m_fCurrentCircleRadius = radius; }
+    float       GetCurrentRadius() { return m_fCurrentCircleRadius; }
 
     void        SetPosToCirclePos(float moveValue);
 
@@ -50,7 +50,7 @@ protected:
 private:
     COLORREF    m_Color;
 
-private:
+protected:
     Vec2    m_vStartPos;
 };
 

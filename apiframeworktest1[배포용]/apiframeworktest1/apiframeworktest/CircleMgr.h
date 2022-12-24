@@ -2,20 +2,18 @@
 #define CIRCLEMGR_H
 #include "Object.h"
 
-class CircleMgr : public Object
+class CircleMgr
 {
 public:
 	SINGLE(CircleMgr);
-private:
-	CLONE(CircleMgr);
 
 public:
 	CircleMgr();
 	virtual ~CircleMgr();
 public:
-	void Init() override;
-	void Update() override;
-	void Render(HDC _dc) override;
+	void Init();
+	void Update();
+	void Render(HDC _dc);
 
 public:
 	Vec2		GetCirclePos() { return m_vCirclePos; }

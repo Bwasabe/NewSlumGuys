@@ -134,7 +134,9 @@
     <ClCompile Include="BaseEnemy.cpp">
       <Filter>Engine\04.Object\BaseEnemy</Filter>
     </ClCompile>
-    <ClCompile Include="TeleportObject.cpp" />
+    <ClCompile Include="TeleportObject.cpp">
+      <Filter>Engine\04.Object\TeleportObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -287,7 +289,9 @@
     <ClInclude Include="BaseEnemy.h">
       <Filter>Engine\04.Object\BaseEnemy</Filter>
     </ClInclude>
-    <ClInclude Include="TeleportObject.h" />
+    <ClInclude Include="TeleportObject.h">
+      <Filter>Engine\04.Object\TeleportObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
