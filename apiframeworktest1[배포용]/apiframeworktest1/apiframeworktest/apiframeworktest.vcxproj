@@ -203,6 +203,7 @@
     <ClInclude Include="SoundMgr.h" />
     <ClInclude Include="StartBtn.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TeleportObject.h" />
     <ClInclude Include="ThornMonster.h" />
     <ClInclude Include="TimeMgr.h" />
     <ClInclude Include="Tip.h" />
@@ -255,6 +256,7 @@
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundMgr.cpp" />
     <ClCompile Include="StartBtn.cpp" />
+    <ClCompile Include="TeleportObject.cpp" />
     <ClCompile Include="ThornMonster.cpp" />
     <ClCompile Include="TimeMgr.cpp" />
     <ClCompile Include="Tip.cpp" />

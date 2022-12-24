@@ -134,6 +134,7 @@
     <ClCompile Include="BaseEnemy.cpp">
       <Filter>Engine\04.Object\BaseEnemy</Filter>
     </ClCompile>
+    <ClCompile Include="TeleportObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -286,6 +287,7 @@
     <ClInclude Include="BaseEnemy.h">
       <Filter>Engine\04.Object\BaseEnemy</Filter>
     </ClInclude>
+    <ClInclude Include="TeleportObject.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="apiframeworktest.ico">
@@ -430,6 +432,9 @@
     </Filter>
     <Filter Include="Engine\04.Object\BaseEnemy">
       <UniqueIdentifier>{d4b4cd94-1083-497f-b17b-aea5b6cda8b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04.Object\TeleportObject">
+      <UniqueIdentifier>{99c265eb-8fb4-4291-89e8-1eb2974f747c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
