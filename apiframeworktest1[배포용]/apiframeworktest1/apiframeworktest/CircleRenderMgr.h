@@ -8,6 +8,7 @@ public:
 	CircleRenderMgr();
 	virtual ~CircleRenderMgr();
 
+	SINGLE(CircleRenderMgr);
 public:
 	void Update() {}; // 플레이어들의 업데이트
 	void Render(HDC _dc) override; // 원들 랜더

@@ -15,18 +15,18 @@ BaseMoveCircle::~BaseMoveCircle()
 }
 
 
-void BaseMoveCircle::SetInOrOutCircle(bool isIn)
-{
-	m_bIsIn = isIn;
-	if (isIn)
-	{
-		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - m_fMyRadius * 0.5f);
-	}
-	else
-	{
-		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius()+CircleMgr::GetInst()-> GetThickness()  + m_fMyRadius * 0.5f);
-	}
-}
+//void BaseMoveCircle::SetInOrOutCircle(bool isIn)
+//{
+//	m_bIsIn = isIn;
+//	if (isIn)
+//	{
+//		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - m_fMyRadius * 0.5f);
+//	}
+//	else
+//	{
+//		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius()+CircleMgr::GetInst()-> GetThickness()  + m_fMyRadius * 0.5f);
+//	}
+//}
 
 void BaseMoveCircle::MoveObject()
 {

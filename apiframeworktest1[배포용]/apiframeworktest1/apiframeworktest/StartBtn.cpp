@@ -108,7 +108,7 @@ void StartBtn::Render(HDC _dc)
 	s_oldHFont = (HFONT)SelectObject(_dc, s_hFont);
 
 	// ³»¿ë
-	TextOut(_dc, GetPos().x, GetPos().y - 20, L"´Ù¶÷Áã Çå ÃÂ¹ÙÄû¿¡ Å¸°íÆÄ", lstrlen(L"´Ù¶÷Áã Çå ÃÂ¹ÙÄû¿¡ Å¸°íÆÄ"));
+	TextOut(_dc, GetPos().x, GetPos().y - 20, L"Play", lstrlen(L"Play"));
 
 	SelectObject(_dc, s_oldHFont);
 	DeleteObject(s_hFont);

@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "BaseCircle.h"
+#include "CircleMgr.h"
 
 BaseCircle::BaseCircle()
 	: m_Color(0)
@@ -23,4 +24,18 @@ void BaseCircle::SetPosToCirclePos(float moveValue)
 
 	SetPos(vPos);
 
+}
+
+void BaseCircle::SetInOrOutCircle(bool isIn)
+{
+	m_bIsIn = isIn;
+	if (isIn)
+	{
+		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() - m_fMyRadius * 0.5f);
+	}
+	else
+	{
+		SetCurrentRadius(CircleMgr::GetInst()->GetInnerRadius() + CircleMgr::GetInst()->GetThickness() + m_fMyRadius * 0.5f);
+	}
+	int a = 0;
 }

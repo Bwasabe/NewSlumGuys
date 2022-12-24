@@ -15,7 +15,7 @@ public:
     void    SetIsGoRight(bool isRight) { m_bIsGoRight = isRight; }
     bool    GetIsGoRight() { return m_bIsGoRight; }
 
-    void    SetInOrOutCircle(bool isIn);
+   // void    SetInOrOutCircle(bool isIn);
 
     void    MoveObject();
 

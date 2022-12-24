@@ -29,6 +29,10 @@ public:
     COLORREF    GetColor() { return m_Color; }
     void        SetColor(COLORREF color) { m_Color = color; }
 
+    void    SetInOrOutCircle(bool isIn);
+
+
+
 protected:
     float   m_fMyRadius;
 private:
