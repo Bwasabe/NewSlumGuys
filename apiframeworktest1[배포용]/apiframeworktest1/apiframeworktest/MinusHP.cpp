@@ -36,7 +36,8 @@ void MinusHP::Render(HDC _dc)
 void MinusHP::EnterCollision(Collider* _pOther)
 {
 	Object* pOtherObj = _pOther->GetObj();
-	if (pOtherObj->GetName() == L"BallPlayer")
+
+	if (pOtherObj->GetName() == L"Player1")
 	{
 		int val = GeHP();
 		SetHP(val--);
